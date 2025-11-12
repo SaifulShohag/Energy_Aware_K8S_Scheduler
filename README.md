@@ -28,6 +28,12 @@ goal is to see if we can achieve energy saving without a terrible tradeoff
 - **Kubernetes Scheduler Plugin/Extender**: Integrates predictions into the node scoring process.  
 - **Grafana + Prometheus**: Used for monitoring and validation.
 
+
+
+## 3. Before running the pod metrics python scripts port-forward the prometheus service as below
+- pip install requests
+- sudo kubectl port-forward svc/prometheus-operated 9090:9090 -n monitoring
+
 ---
 
 ## 3. TODO
