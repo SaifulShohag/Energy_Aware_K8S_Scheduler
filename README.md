@@ -33,6 +33,9 @@ goal is to see if we can achieve energy saving without a terrible tradeoff
 ## 3. Before running the pod metrics python scripts port-forward the prometheus service as below
 - pip install requests
 - sudo kubectl port-forward svc/prometheus-operated 9090:9090 -n monitoring
+## 4. you can access prometheus dashboard 
+  - 127.0.0.1:9090
+
 
 ---
 
