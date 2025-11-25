@@ -1,0 +1,15 @@
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+clientConnection:
+  kubeconfig: "/etc/kubernetes/scheduler.conf"
+extenders:
+- urlPrefix: "http://energy-scheduler-extender.kube-system:8080/"
+  filterVerb: "filter"
+  prioritizeVerb: "prioritize"
+  weight: 1
+  enableHTTPS: false
+  nodeCacheCapable: false
+  managedResources:
+  - name: "scheduling.5g/energy"
+    ignoredByScheduler: true
+  httpTimeout: 10s
